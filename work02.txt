@@ -1,0 +1,111 @@
+work2 类和对象（2）
+2025.3.19
+
+作业上交时请按照这种方式命名文件：学号+姓名+work2.cpp  
+如果需要上交多个文件： 学号+姓名+work2.rar （其它压缩格式也可以）。（请不要上交编译链接形成的二进制文件，只上交源文件（.h和.cpp）），（如果有项目管理文件，可以把项目管理文件一起上交）。
+
+1. 程序设计：
+1.1设计运动员类Sporter，包含：
+成员数据（私有）：
+	姓名_name ，数据类型 string ，默认值“XXX”
+	学号_number，数据类型 string，默认值“00000”
+	性别_gender，数据类型 char，默认值‘m’('m'代表男，‘f’表示女)
+	百米跑秒数_second，数据类型 double，默认值 0
+成员函数（公有）：
+（1）构造函数
+	Student(string name="xxx",string num="00000",chat gen='m',double score=0);在实现这个构造函数的时候，请使用初始化列表；
+（2）读取分数的接口(公有)
+	double GetSecond() const;		(建议使用const)
+（3）输出学生信息接口（公有）：
+	void Show() const;			 	(建议使用const)
+	如果需要其他成员函数，请自行增加。
+
+1.2类外函数：
+找出百米成绩最好的运动员：
+Sporter FastSporter(Sporter* s);
+
+1.3在主函数main()中:
+（1） 定义包含10个运动员的数组spt1[10]：
+Sporter spt1[10];
+输出spt1中每一个运动员的信息；
+（2） 定义包含10个运动员的数组spt2[10]：
+Sporter spt2[10]={ Sporter ("张三","00005",'m',13.2), 
+Sporter("李四","00012",'m',13.8),
+Sporter ("王五","00108",'m',12.7),
+Sporter ("刘丽","00022",'f',15.6),
+Sporter ("赵康","00115",'m',11.9),
+Sporter ("张春生","00059",'m',12.3),
+Sporter ("周勇","00001",'m',10.5),
+Sporter ("王阳","00072",'f',14.2),
+Sporter ("刘燕","00023",'f',13.5),
+Student("何平","00007",'f',14.9)
+};
+输出spt2中每一个运动员的信息；
+（3） 调用FastSporter函数，找到跑的最快的运动员，输出这名运动员的信息。
+
+1.4程序的输出（供参考）：
+spt1的10名同学的信息：
+（步骤1的输出省略）
+spt2的10名同学的信息：
+name: 张三
+number: 00005
+gender: 男
+second: 13.2
+name: 李四
+number: 00012
+gender: 男
+second: 13.8
+......
+name: 何平
+number: 00007
+gender: 女
+score: 14.9
+最快的运动员信息：
+name: 周勇
+number: 00001
+gender: 男
+second: 10.5
+
+2. 程序设计：
+定义拷贝构造函数解决浅拷贝问题。（参看PPT p.31~34）
+2.1设计类学校School，包含：
+成员数据（私有）：
+	名称： _name，数据类型：char* 
+	地址：_addr，数据类型：char* 
+成员函数（公有）：
+	（1）构造函数
+School(const char* name,const char* addr); 
+		在构造函数中给_name和_addr分配空间，写入_name和_addr的实际内容；并输出“school constructed.” .
+	（2）拷贝构造函数
+		School(const School& s); 
+		在拷贝构造函数中给_name和_addr分配空间，写入实际内容；并输出“school copy constructed.” .
+	（3）析构函数
+		~School();  
+		在析构函数中，收回分配给_name和_addr的空间，并输出“school 	deconstructed. delete space of name and address.”
+	（4）显示学校信息函数void Show() const;
+	如果需要其他成员函数，请自行增加。
+
+2.2 在主函数main()中：
+用户输入学校的名称和地址，创建学校myschool,输出myschool的信息；
+利用myschool拷贝构造新学校对象yourschool,输出yourschool的信息；
+当程序结束时，自动析构yourschool和myschool对象。
+
+2.3 提示：当需要输入包含空格的字符串时，可以使用下面的方法：
+char str[80];						
+cin.getline(str,80);			//字符串被放在str中，字符串长度不要超过79
+
+2.4下面是程序的运行结果（供参考）：
+Input school name: Beijing Normal University
+Input school address: No.19, Xinjiekouwai St, Haidian District, Beijing 
+school constructed.
+myschool:
+name: 	Beijing Normal University
+address: 	No.19, Xinjiekouwai St, Haidian District, Beijing
+school copy constructed.
+yourschool:
+name: 	Beijing Normal University
+address: 	No.19, Xinjiekouwai St, Haidian District, Beijing
+school deconstructed. delete space of name and address.
+school deconstructed. delete space of name and address.
+	
+
