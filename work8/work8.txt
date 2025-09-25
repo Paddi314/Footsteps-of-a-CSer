@@ -1,0 +1,68 @@
+Work8   继承和派生（2）
+2025.4.30
+
+选做题：
+1.	虚基类编程
+1.1	类的描述：
+一个学校的人员管理系统中，有学生、员工、助工三种类型的人，助工由勤工俭学的学生来兼任，兼有学生和员工两类人的特征，设计合适的类模拟此人员管理系统。
+Student类、Employee类、stuEmployee类；
+把这几类人员的共同特征和行为抽象形成基类Person类。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“-” 私有成员
+“+”公有成员
+
+在设计各个类时，请结合主程序的输入输出，增加构造函数、Set函数、输出函数等。
+1.2主程序main() 中：
+根据用户的选择来测试Person、Student、Employee、StuEmployee对象。
+1.3下面是程序的一次运行（供参考）：
+Test p--Person s--Student e--Employee v--StudentEmployee o--Test Over: p
+Input person name: 王伟
+Input person age: 40
+王伟 40
+Test p--Person s--Student e--Employee v--StudentEmployee o--Test Over: s
+Input student name: 刘红
+Input student age: 20
+Input student major: computer
+Input student id: 202010000001
+刘红 20 computer 202010000001
+Test p--Person s--Student e--Employee v--StudentEmployee o--Test Over: e
+Input employee name: 李凯
+Input employee age: 30
+Input employee department: ScienceDept.
+Input employee id: 19980055
+李凯 30 ScienceDept. 19980055
+Test p--Person s--Student e--Employee v--StudentEmployee o--Test Over: v
+Input stuEmployee name: 赵成
+Input stuEmployee age: 23
+Input stuEmployee major: AI
+Input stuEmployee student id: 201830000005
+Input stuEmployee department: TeachingAffairDept.
+Input stEemployee employee id: 20231108
+赵成 23 AI 201830000005 TeachingAffairDept. 20231108
+Test p--Person s--Student e--Employee v--StudentEmployee o--Test Over: o
+Byebye~
+1.4 提醒和要求：
+	使用虚基类；
+	使用多文件组织程序：
+	多文件组织程序需要先建立项目，建立项目的通常操作：
+	文件-新建-项目
+	选择控制台应用程序“console application”
+	然后新建的文件被加入到此项目中

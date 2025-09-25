@@ -1,0 +1,14 @@
+
+夏威夷	阿拉斯加	洛杉矶	芝加哥	纽约	大西洋时间	巴西	大西洋-中部
+Hawaii	Alaska	LosAngeles	Chicago	NewYork	Atlantic	Brazil	AtlanticM
+ha	ak	la	ch	ny	at	bz	atm
+GMT-10	GMT-9	GMT-8	GMT-6	GMT-5	GMT-4	GMT-3	GMT-2
+								
+伦敦	柏林	开罗	莫斯科	新德里	曼谷	北京	东京	悉尼
+London	Berlin	Cario	Moscow	NewDelhi	Bangkok	Beijing	Tokyo	Sydney
+ld	bl	ca	mo	nd	bk	bj	tk	sy
+GMT	GMT +1	GMT +2	GMT +3	GMT +5	GMT +7	GMT +8	GMT +9	GMT +10
+
+
+
+
